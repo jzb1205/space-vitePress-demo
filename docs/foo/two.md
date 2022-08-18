@@ -2,15 +2,21 @@
 
 This is a .md using a custom component
 
-<CustomComponent />
+
+<!-- 这一句会影响打包不成功 -->
+<!-- <ClientOnly>
+  <CustomComponent />
+</ClientOnly> -->
 
 ## More docs
 
 ...
 
-#### text <Tag/> 
+<!-- 这一句会影响打包不成功 -->
+<!-- #### text <Tag/>    -->
 ## text `<Tag/>`
 
-<script setup>
+<!-- 这一句会影响打包不成功 -->
+<!-- <script setup>
 import CustomComponent from '../components/CustomComponent.vue'
-</script>
+</script> -->
