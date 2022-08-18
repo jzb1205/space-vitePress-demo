@@ -2,9 +2,12 @@ module.exports = {
   title: "react-ant-admin", // 顶部左侧标题
   description: 'first vitepress', //站点的描述。这将作为<meta>标记渲染在页面HTML中
   // titleTemplate: 'Vite & Vue powered static site generator',
-  base: './', // 项目的根路径
+  base: '/', // 项目的根路径
   lang: 'zh-CN',  //这个属性将作为 <html lang="zh-CN"> 标记渲染到页面HTML中。 注意，lang 属性只会通过 vitepress build 构建站点时添加，通过 vitepress dev 渲染时不会出现。
   // outDir: '../public',
+  markdown: {
+    lineNumbers: true
+  },
   head: [
     // 设置 描述 和 关键词
     ['link', { rel: 'icon', href: './favicon.ico' }],
@@ -41,26 +44,22 @@ module.exports = {
       //   link: '...'
       // }
     ],
-    footer: {
-      message: 'CSDN只爭朝夕不負韶華',
-      copyright: 'Copyright © 2022-present CSDN'
-    },
     sidebar: {
-      // 侧边栏
       "/": [
         {
           text: "介绍",
           items: [
-            { text: "什么是react-ant-admin？", link: "/index" },
-            { text: "开始使用", link: "/start" },
-            { text: "文件配置", link: "/configuration" },
-            { text: "路径配置", link: "/path" },
+            { text: "foo", link: "/foo/" },
+            { text: "foo-one", link: "/foo/one" },
+            { text: "foo-two", link: "/foo/two" },
+            { text: "bar", link: "/bar/" },
+            { text: "bar-one", link: "/bar/one" },
+            { text: "bar-two", link: "/bar/two" }
           ],
-        },
+        }
       ],
     },
     nav: [
-      // 顶部右侧导航栏
       { text: "介绍", link: "/index" },
       {
         text: "预览地址",
@@ -71,9 +70,18 @@ module.exports = {
         link: "/contact/",
       },
     ],
-    // editLink: {
-    //   pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
-    //   text: 'Edit this page on GitHub'
-    // }
+    editLink: {
+      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+      text: 'Edit this page on GitHub'
+    },
+    editLinkText: 'Edit this page on GitHub',
+    locales: {},
+    repo: '',
+    docsDir: 'docs',
+    lastUpdated: 'Last Updated',
+    footer: {
+      message: 'CSDN只爭朝夕不負韶華',
+      copyright: 'Copyright © 2022-present CSDN'
+    },
   },
 };
